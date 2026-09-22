@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Chakra Petch", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+
+  --color-graphite-950: #0d0e10;
+  --color-graphite-900: #121315;
+  --color-graphite-850: #181a1d;
+  --color-graphite-800: #1f2226;
+  --color-graphite-700: #2b2f36;
+  --color-graphite-600: #3c424c;
+  --color-graphite-500: #555d6b;
+  
+  --color-safety-orange: #ff5500;
+  --color-safety-orange-hover: #e04a00;
+  --color-safety-orange-light: #fff0eb;
+  
+  --color-concrete-100: #f4f5f7;
+  --color-concrete-200: #e5e7eb;
+  --color-concrete-300: #d1d5db;
+  --color-concrete-400: #9ca3af;
+  --color-concrete-500: #6b7280;
+}
+
+/* Technical Blueprint Grid Pattern */
+.bg-blueprint-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.bg-blueprint-grid-dense {
+  background-size: 16px 16px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 85, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 85, 0, 0.07) 1px, transparent 1px);
+}
+
+.bg-blueprint-subtle {
+  background-size: 32px 32px;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+}
+
+/* Angular Technical Cutouts */
+.cut-corner-br {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+}
+
+.cut-corner-tl-br {
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+}
+
+.cut-corner-tr {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+
+/* Ruler Marks Styling */
+.ruler-ticks {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 85, 0, 0.35) 0px,
+    rgba(255, 85, 0, 0.35) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, .font-tech {
+  font-family: var(--font-display);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.font-code {
+  font-family: var(--font-mono);
+}
